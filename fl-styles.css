@@ -38,6 +38,7 @@ body {
     background: var(--bone);
 }
 
+/* CALENDAR & WATERING SECTION */
 .sectionCalendar {
     display: flex;
     flex-wrap: wrap;

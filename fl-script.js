@@ -1,16 +1,12 @@
 const currentDate = document.querySelector(".c-current-date");
 const daysTag = document.querySelector(".c-days");
 const prevNextIcon = document.querySelectorAll(".c-icons span");
-
-
-// getting new date, current year, and month
 let date = new Date(),
 currYear = date.getFullYear(),
 currMonth = date.getMonth();
+let wateringInterval = 9; // default watering interval of snake plant
 
-// default watering interval
-let wateringInterval = 5;
-
+// Calendar 
 const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
 const renderCalendar = () => {
@@ -29,7 +25,7 @@ const renderCalendar = () => {
         const currentDate = new Date();
         const isToday = (i === currentDate.getDate() && currMonth === currentDate.getMonth() && currYear === currentDate.getFullYear()) ? "c-active" : "";
         // watering indicator
-        const wateringDate = (i % wateringInterval === currentDate.getDate() % wateringInterval) ? `<img src="images/wateringCan.svg" alt="Watering can icon" width="20" height="20">` : "<div class=wateringCanIcon-placeholder></div>";
+        const wateringDate = (i % wateringInterval === currentDate.getDate() % wateringInterval) ? `<img src="images/wateringCan.svg" alt="watering can icon" width="20" height="20">` : "<div class=wateringCanIcon-placeholder></div>";
         liTag += `<li class="${isToday}">${i}${wateringDate}</div></li>`;
     }
 
@@ -42,6 +38,7 @@ const renderCalendar = () => {
 }
 renderCalendar();
 
+// Update calendar for other years
 prevNextIcon.forEach(icon => {
     icon.addEventListener("click", () => {
         currMonth = icon.id === "prev" ? currMonth - 1 : currMonth + 1;
@@ -58,12 +55,11 @@ prevNextIcon.forEach(icon => {
     });
 });
 
+// Watering animation 
 const updateWateringInterval = (interval) => {
     wateringInterval = interval;
     renderCalendar();
 }
-
-const plantName = document.querySelector("#plant-Name");
 
 const animateWateringCan = () => {
     wateringCan.classList.add("animate");
@@ -73,44 +69,41 @@ const animateWateringCan = () => {
 }
 
 const animateWaterFlow = () => {
-    waterFlow.style.display = "block"; // Show the water element
+    waterFlow.style.display = "block"; 
     waterFlow.classList.add("animate");
     waterFlow.addEventListener("animationend", () => {
         waterFlow.classList.remove("animate");
     }, { once: true });
 }
 
+// Display plant image 
 const updatePlantImage = (src) => {
     plantImage.src = src;
     plantImage.classList.add("active");
 }
+
+// Display plant name
+const plantName = document.querySelector("#plant-Name");
 
 const showPlantName = (name) => {
     plantName.textContent = name;
     plantName.classList.add("visible");
 };
 
-document.getElementById("intervalSnake").addEventListener("click", () => {
-    updateWateringInterval(5);
-    animateWateringCan();
-    animateWaterFlow();
-    updatePlantImage("./images/snakeplant.svg");
-    showPlantName("Snake Plant")
-});
+// Array with details on each plant
+const plantDetails = [
+    { id: "intervalSnake", interval: 5, imgSrc: "./images/snakeplant.svg", name: "Snake Plant" },
+    { id: "intervalFL", interval: 9, imgSrc: "./images/fiddleleaf.svg", name: "Fiddle-Leaf Fig" },
+    { id: "intervalAloe", interval: 11, imgSrc: "./images/aloe.svg", name: "Aloe Vera" }
+];
 
-document.getElementById("intervalFL").addEventListener("click", () => {
-    updateWateringInterval(9);
-    animateWateringCan();
-    animateWaterFlow();
-    updatePlantImage("./images/fiddleleaf.svg");
-    showPlantName("Fiddle-Leaf Fig")
+// Event listener for plant toggle button
+plantDetails.forEach(detail => {
+    document.getElementById(detail.id).addEventListener("click", () => {
+        updateWateringInterval(detail.interval);
+        animateWateringCan();
+        animateWaterFlow();
+        updatePlantImage(detail.imgSrc);
+        showPlantName(detail.name);
+    });
 });
-
-document.getElementById("intervalAloe").addEventListener("click", () => {
-    updateWateringInterval(11);
-    animateWateringCan();
-    animateWaterFlow();
-    updatePlantImage("./images/aloe.svg");
-    showPlantName("Aloe Vera")
-});
-
