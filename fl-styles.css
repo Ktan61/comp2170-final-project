@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined');
+/*GENERAL-----------------------*/
+:root {
+    --black: #1A1D1A;
+    --blue: #74B4C6;
+    --bone: #ECE2D0;
+    --darkGreen: #3E655D;
+    --greenGrey: #D8E0DF;
+    --lightBlue: #A1D6E4;
+    --lightGreen: #93BDB5;
+    --lighterGreen: #AADCD2;
+    --lightOrange: #FAB380;
+    --orange: #F7802B;
+    --purple: #D4B1CF;
+    --white: #FFFFFF;
+    --font-h1: 3rem; /*48px*/
+    --font-h2: 2.5rem; /*40px*/
+    --font-h3: 2rem; /*32px*/
+    --font-h4: 1.5rem; /*24px*/
+    --font-h5: 1.25rem; /*20px*/
+    --font-body: 1rem; /*16px*/ 
+    --font-button: 1.5rem; /*24px*/ 
+    --font-link: 1rem; /*16px*/ 
+    }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Figtree', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: var(--bone);
+}
+
+.sectionCalendar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+/* MAIN CALENDAR FUNCTIONALITY */
+.c-wrapper {
+    width: 550px;
+    height: 620px;
+    padding-top: 15px;
+    background: var(--white);
+    border-radius: 20px;
+}
+
+.c-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 32px 10px;
+}
+
+.c-header .c-current-date {
+    font-size: 1.45rem;
+    font-weight: 500;
+}
+
+.c-header .c-icons span {
+    height: 38px;
+    width: 38px;
+    margin: 0 1px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 38px;
+    border-radius: 50%;
+    /*background: var(--greenGrey);*/
+}
+
+.c-header .c-icons span:hover {
+    background: var(--greenGrey);
+}
+
+.c-header .c-icons span:last-child {
+    margin-right: -10px;
+}
+
+.c-calendar {
+    padding: 20px;
+}
+
+.c-calendar ul {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.c-calendar .c-days {
+    margin-bottom: 20px;
+}
+
+.c-calendar .c-weeks li {
+    font-weight: 500;
+}
+
+.c-calendar .c-days li {
+    z-index: 1;
+    margin-top: 30px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.c-calendar ul li{
+    position: relative;
+    width: calc(100% / 7);
+}
+
+.c-days li.c-inactive {
+    color: #b3bab3;
+}
+
+.c-days li.c-active {
+    color: var(--white);
+}
+
+.c-calendar ul li::before {
+    position: absolute;
+    content:"";
+    height: 55px;
+    width: 55px;
+    top: 45%;
+    left: 50%;
+    z-index: -1;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.c-days li:hover::before {
+    background: var(--greenGrey);
+}
+
+.c-days li.c-active::before {
+    background: var(--lightGreen);
+}
+
+.c-days li {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* WATERING SCHEDULE TOGGLE + ANIMATIONS */
+
+.toggleButtonsContainer {
+    display: flex;
+    flex-direction: row;
+    height: 120px;
+    gap: 2rem;
+    padding: 2.5rem 0 1rem 1rem;
+}
+
+.wateringToggle {
+    height: 100px;
+    width: 100px;
+    background-color: var(--lightBlue);
+    border: none;
+    border-radius: 30%;
+    cursor: pointer;
+}
+
+.wateringToggle:hover {
+    background-color: var(--lighterGreen);
+}
+
+
+.calendarToggleAndWatering {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.calendarToggleAndWatering h3 {
+    font-family: "Glass Antiqua", cursive;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 32px;
+    text-align: center;
+    color: var(--black);
+}
+
+#plant-Name {
+    height: 40px;
+    font-family: "Glass Antiqua", cursive;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 40px;
+    text-align: center;
+    color: var(--darkGreen);
+    padding-top: 1rem;
+}
+
+.wateringDisplay {
+    padding-top: 3rem;
+    position: relative;
+}
+
+#wateringCan {
+    position: absolute;
+    top: 6rem;
+    left: 11rem;
+    transform: rotate(30deg);
+}
+
+.wateringCanIcon-placeholder {
+    width: 20px;
+    height: 20px;
+}
+
+@keyframes waterPlant {
+    0% { transform: rotate(30deg); }
+    40% { transform: translate(-4rem, -5rem) rotate(-10deg); }
+    65% { transform: translate(-4rem, -5rem) rotate(-10deg); }
+    100% { transform: rotate(30deg); }
+}
+
+#wateringCan.animate {
+    animation: waterPlant 2s ease-in-out;
+}
+
+#waterFlow {
+    display: none;
+    position: absolute;
+    top: 11.5rem; 
+    left: 7rem;
+    transform: translateX(-50%);
+    width: 15px;
+    height: 0; 
+    border-radius: 50%;
+    background-color: var(--blue); 
+    opacity: 1;
+    animation: waterFlowAnimation 0.7s linear;
+}
+
+@keyframes waterFlowAnimation {
+    0% { height: 0;}
+    100% { height: 75px; opacity: 0.5; }
+}
+
+#waterFlow.animate {
+    animation: waterPlant 0.7s ease-in-out;
+}
