@@ -43,18 +43,19 @@ a:active {
 
 /*GENERAL PAGE-----------------------*/
 body {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 2rem 5rem;
+    overflow-x: hidden;
 }
 
 .title {
-    border: gray 1px solid;
     font-family: "Glass Antiqua", cursive;
-    font-weight: 400;
+    font-weight: 500;
     font-style: normal;
-    font-size: 48px;
+    font-size: 56px;
     text-align: center;
     color: var(--darkGreen)
 }
@@ -63,6 +64,7 @@ body {
 .navbar {
     display: flex;
     width: 100vw;
+    height: 60px;
     padding-left: 15%;
     padding-right: 15%;
     align-items: center;
@@ -71,41 +73,65 @@ body {
 }
 
 .navlist {
-    border: gray 1px solid;
     display: flex;
-    width: 45vw;
+    width: 40vw;
     justify-content: space-between;
     gap: 1rem;
     list-style: none;
-    font-size: var(--font-h5);
+    font-size: var(--font-h4);
     font-family: "Glass Antiqua", sans-serif;
     font-weight: 600;
+    color: var(--black);
 }
 
-/**_______________________________________________________________________________________________**/
-/**-------------------------------------------HOME------------------------------------------------**/
+.navlist-item {
+    cursor: pointer;
+}
 
+.navlist-item:hover {
+    color: var(--darkGreen);
+}
 
-/*SECTION: TEMPORARY---------------------------*/
-.temporary {
-    border: gray 1px solid;
+.pothos-decoration-left {
+    position: absolute;
+    left: -8rem;
+    top: -13rem;
+}
+
+.pothos-decoration-right {
+    position: absolute;
+    right: -8rem;
+    top: -13rem;
+    transform: rotateY(180deg);
+}
+
+/*FOOTER------------------------------------*/
+footer {
+    position: absolute;
+    bottom: 0;
+    z-index: 5;
     display: flex;
-    width: 100%;
     justify-content: center;
-    flex-wrap: wrap;
-    padding: 5rem;
+    align-items: center;
+    width: 100vw;
+    height: 40px;
+    background: var(--darkGreen);
+    color: var(--greenGrey);
+    font-size: 16px;
 }
 
-
 /**_______________________________________________________________________________________________**/
-/**---------------------------------------FIDDLE-LEAF FIG-----------------------------------------**/
-
-
-
-/**_______________________________________________________________________________________________**/
-/**-----------------------------------------ALOE VERA---------------------------------------------**/
+/**------------------------------------MADELINE - INFO CARDS--------------------------------------**/
 
 
 
 /**_______________________________________________________________________________________________**/
-/**----------------------------------------SNAKE PLANT--------------------------------------------**/
+/**--------------------------------------PIA - GALLERY--------------------------------------------**/
+
+
+
+/**_______________________________________________________________________________________________**/
+/**------------------------------------KATHRYN - CALENDAR-----------------------------------------**/
+.sectionCalendar {
+    padding: 3rem 0;
+}
