@@ -3,26 +3,51 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="styles.css" rel="stylesheet" type="text/css">
+        <link href="fl-styles.css" rel="stylesheet" type="text/css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Glass+Antiqua&display=swap" rel="stylesheet">        <title>Fiddle-Leaf Fig</title>
+        <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Glass+Antiqua&display=swap" rel="stylesheet">  
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />        
+        <title>Fiddle-Leaf Fig</title>
     </head>
 <body>
-    <header class="navbar">
-        <h1 class="title">Hao's Plants</h1>
-        <ul class="navlist">
-          <li class="navlist-item"><a href="index.html">Home</a></li>
-          <li class="navlist-item"><strong>Fiddle-Leaf Fig</strong></li>
-          <li class="navlist-item"><a href="aloe.html">Aloe Vera</a></li>
-          <li class="navlist-item"><a href="snakeplant.html">Snake Plant</a></li>
-        </ul>
-    </header>
-    <section class="temporary">
-        <img src="./images/fiddleleaf.svg" alt="fiddleleaf fig vector illustration" width="300" height="400" class="fiddleleaf">
+    <section class="sectionCalendar">
+        <div class="c-wrapper">
+            <header class="c-header">
+                <p class="c-current-date">May 2024</p>
+                <div class="c-icons">
+                    <span id="prev" class="material-symbols-outlined">chevron_left</span>
+                    <span id="next" class="material-symbols-outlined">chevron_right</span>
+                </div>
+            </header>
+            <div class="c-calendar">
+                <ul class="c-weeks">
+                    <li>Sun</li>
+                    <li>Mon</li>
+                    <li>Tue</li>
+                    <li>Wed</li>
+                    <li>Thu</li>
+                    <li>Fri</li>
+                    <li>Sat</li>
+                </ul>
+                <ul class="c-days"></ul>
+            </div>
+        </div>
+        <div class="calendarToggleAndWatering">
+            <h3>Select Plant to View Watering Schedule:</h3>
+            <h2 id="plant-Name">Snake Plant</h2>
+            <div class="toggleButtonsContainer">
+                <button id="intervalSnake" class="wateringToggle"><img src="./images/snakeplant.svg" alt="aloe vera vector illustration" width="60" height="70"></button>
+                <button id="intervalFL" class="wateringToggle"><img src="./images/fiddleleaf.svg" alt="aloe vera vector illustration" width="60" height="70"></button>
+                <button id="intervalAloe" class="wateringToggle"><img src="./images/aloe.svg" alt="aloe vera vector illustration" width="60" height="70"></button>
+            </div>
+            <div class="wateringDisplay">
+                <img id="plantImage" src="./images/snakeplant.svg" alt="Plant illustration" width="250" height="300" class="plant-image">
+                <img src="images/wateringCan.svg" id="wateringCan" alt="Watering can vector illustration" width="200" height="300">
+                <div id="waterFlow"></div>
+            </div>
+        </div>
     </section>
-    <footer>
-        <p>Created by: <span class="footer-authors">Madeline Struthers, Pia Mendoza, & Kathryn Tan</span></p>
-    </footer>
+    <script src="fl-script.js"></script>
 </body>
 </html>
