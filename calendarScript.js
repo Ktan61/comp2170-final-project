@@ -92,8 +92,8 @@ const showPlantName = (name) => {
 
 // Array with details on each plant
 const plantDetails = [
-    { id: "intervalSnake", interval: 5, imgSrc: "./images/snakeplant.svg", name: "Snake Plant" },
-    { id: "intervalFL", interval: 9, imgSrc: "./images/fiddleleaf.svg", name: "Fiddle-Leaf Fig" },
+    { id: "intervalSnake", interval: 9, imgSrc: "./images/snakeplant.svg", name: "Snake Plant" },
+    { id: "intervalFL", interval: 5, imgSrc: "./images/fiddleleaf.svg", name: "Fiddle-Leaf Fig" },
     { id: "intervalAloe", interval: 11, imgSrc: "./images/aloe.svg", name: "Aloe Vera" }
 ];
 
