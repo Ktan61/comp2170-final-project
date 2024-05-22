@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="galleryStyles.css" rel="stylesheet" type="text/css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Glass+Antiqua&display=swap" rel="stylesheet">        <title>Aloe</title>
+    </head>
+<body>
+    <section class="temporary">
+        <div class="gallery-box">
+            <div class="img-preview-box">
+                <img src="./images/fl-1.png" id="imgPreview" alt="Preview Image" />
+            </div>
+            <div class="img-thumb-container" id="thumbContainer">
+                <div class="thumb" onclick="changePreview('./images/fl-1.png')">
+                    <img src="./images/fl-1.png" alt="Thumbnail 1" />
+                </div>
+                <div class="thumb" onclick="changePreview('./images/fl-2.png')">
+                    <img src="./images/fl-2.png" alt="Thumbnail 2" />
+                </div>
+                <div class="thumb" onclick="changePreview('./images/fl-3.png')">
+                    <img src="./images/fl-3.png" alt="Thumbnail 3" />
+                </div>
+                <div class="thumb" onclick="changePreview('./images/av-1.png')">
+                    <img src="./images/av-1.png" alt="Thumbnail 4"/>
+                </div>
+                <div class="thumb" onclick="changePreview('./images/av-2.png')">
+                    <img src="./images/av-2.png" alt="Thumbnail 5"/>
+                </div>
+                <div class="thumb" onclick="changePreview('./images/av-3.png')">
+                    <img src="./images/av-3.png" alt="Thumbnail 6"/>
+                </div>
+                <div class="thumb" onclick="changePreview('./images/sp-1.png')">
+                    <img src="./images/sp-1.png" alt="Thumbnail 7"/>
+                </div>
+                <div class="thumb" onclick="changePreview('./images/sp-2.png')">
+                    <img src="./images/sp-2.png" alt="Thumbnail 8"/>
+                </div>
+                <div class="thumb" onclick="changePreview('./images/sp-3.png')">
+                    <img src="./images/sp-3.png" alt="Thumbnail 9"/>
+                </div>
+            </div>
+        </div>
+    
+    </section>
+
+    <script src="galleryScript.js"></script>
+</body>
+</html>
