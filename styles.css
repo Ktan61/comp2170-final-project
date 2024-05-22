@@ -55,9 +55,9 @@ body {
     font-family: "Glass Antiqua", cursive;
     font-weight: 500;
     font-style: normal;
-    font-size: 56px;
+    font-size: 60px;
     text-align: center;
-    color: var(--darkGreen);
+    color: var(--black);
 }
 
 /*HEADER & NAVBAR---------------------------*/

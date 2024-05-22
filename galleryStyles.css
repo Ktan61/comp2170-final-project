@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined');
 /*GENERAL-----------------------*/
 :root {
     --black: #1A1D1A;
@@ -22,102 +23,10 @@
     --font-link: 1rem; /*16px*/ 
     }
 
-* { 
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-html {
-    background-color: var(--bone);
-    font-family: "Figtree", sans-serif;
-}
-
-a:link,
-a:visited,
-a:hover,
-a:active { 
-    text-decoration: none; 
-    color: var(--darkGreen);
-} 
-
-/*GENERAL PAGE-----------------------*/
-body {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem 5rem;
-    overflow-x: hidden;
-}
-
-.title {
-    font-family: "Glass Antiqua", cursive;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 56px;
-    text-align: center;
-    color: var(--darkGreen)
-}
-
-/*HEADER & NAVBAR---------------------------*/
-.navbar {
-    display: flex;
-    width: 100vw;
-    height: 60px;
-    padding-left: 15%;
-    padding-right: 15%;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
-}
-
-.navlist {
-    display: flex;
-    width: 40vw;
-    justify-content: space-between;
-    gap: 1rem;
-    list-style: none;
-    font-size: var(--font-h4);
-    font-family: "Glass Antiqua", sans-serif;
-    font-weight: 600;
-    color: var(--black);
-}
-
-.navlist-item {
-    cursor: pointer;
-}
-
-.navlist-item:hover {
-    color: var(--darkGreen);
-}
-
-.pothos-decoration-left {
-    position: absolute;
-    left: -8rem;
-    top: -13rem;
-}
-
-.pothos-decoration-right {
-    position: absolute;
-    right: -8rem;
-    top: -13rem;
-    transform: rotateY(180deg);
-}
-
-/*FOOTER------------------------------------*/
-footer {
-    position: absolute;
-    bottom: 0;
-    z-index: 5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 40px;
-    background: var(--darkGreen);
-    color: var(--greenGrey);
-    font-size: 16px;
 }
 
 /*GALLERY-----------------------*/
