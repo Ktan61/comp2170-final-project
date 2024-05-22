@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="styles.css" rel="stylesheet" type="text/css">
+    <link href="galleryStyles.css" rel="stylesheet" type="text/css">
     <link href="calendarStyles.css" rel="stylesheet" type="text/css">
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,7 +26,40 @@
         Madeline's Section 
     </section>
     <section class="sectionGallery" id="sectionGallery">
-        Pia's Section
+        <div class="gallery-box">
+            <div class="img-preview-box">
+                <img src="./images/fl-1.png" id="imgPreview" alt="Preview Image" />
+            </div>
+            <div class="img-thumb-container" id="thumbContainer">
+                <div class="thumb" onclick="changePreview('./images/fl-1.png')">
+                    <img src="./images/fl-1.png" alt="Thumbnail 1" />
+                </div>
+                <div class="thumb" onclick="changePreview('./images/fl-2.png')">
+                    <img src="./images/fl-2.png" alt="Thumbnail 2" />
+                </div>
+                <div class="thumb" onclick="changePreview('./images/fl-3.png')">
+                    <img src="./images/fl-3.png" alt="Thumbnail 3" />
+                </div>
+                <div class="thumb" onclick="changePreview('./images/av-1.png')">
+                    <img src="./images/av-1.png" alt="Thumbnail 4"/>
+                </div>
+                <div class="thumb" onclick="changePreview('./images/av-2.png')">
+                    <img src="./images/av-2.png" alt="Thumbnail 5"/>
+                </div>
+                <div class="thumb" onclick="changePreview('./images/av-3.png')">
+                    <img src="./images/av-3.png" alt="Thumbnail 6"/>
+                </div>
+                <div class="thumb" onclick="changePreview('./images/sp-1.png')">
+                    <img src="./images/sp-1.png" alt="Thumbnail 7"/>
+                </div>
+                <div class="thumb" onclick="changePreview('./images/sp-2.png')">
+                    <img src="./images/sp-2.png" alt="Thumbnail 8"/>
+                </div>
+                <div class="thumb" onclick="changePreview('./images/sp-3.png')">
+                    <img src="./images/sp-3.png" alt="Thumbnail 9"/>
+                </div>
+            </div>
+        </div>
     </section>
     <section class="sectionCalendar" id="sectionCalendar">
         <div class="c-wrapper">
@@ -70,6 +104,7 @@
     <img class="pothos-decoration-left" src="./images/pothos.svg" alt="plant illustration" width="450" height="450">
     <img class="pothos-decoration-right" src="./images/pothos.svg" alt="plant illustration" width="450" height="450">
     <script src="script.js"></script>
+    <script src="galleryScript.js"></script>
     <script src="calendarScript.js"></script>
 </body>
 </html>
