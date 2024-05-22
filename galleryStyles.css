@@ -174,3 +174,15 @@ footer {
 .thumb:hover img {
     opacity: 0.8;
 }
+
+.caption {
+    text-align: center;
+    padding: 10px;
+    background-color: var(--darkGreen);
+}
+
+.caption h5 {
+    color: #FFFFFF;
+    font-family: "Glass Antiqua", cursive;
+    font-size: var(--font-h5);
+}
