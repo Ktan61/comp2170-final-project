@@ -6,11 +6,13 @@
     <link href="styles.css" rel="stylesheet" type="text/css">
     <link href="galleryStyles.css" rel="stylesheet" type="text/css">
     <link href="calendarStyles.css" rel="stylesheet" type="text/css">
+    <link href="cardStyles.css" rel="stylesheet" type="text/css">
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Glass+Antiqua&display=swap" rel="stylesheet">   
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />         
+    <link rel="stylesheet" href="https://cloudflare.com/ajax/libs/twitter-bootstrap/5.2.3/css/bootstrap.min.css">
     <title>Hao's Plants</title>
 </head>
 <body>
@@ -25,8 +27,74 @@
         <img class="pothos-decoration-right" src="./images/pothos.svg" alt="plant illustration" width="450" height="450">    
     </header>
     <section class="sectionCards" id="sectionCards">
-        Madeline's Section 
+        <div class="card-content-area">
+            <div class="card-container">
+                <div class="card-row">
+                    <div class="col-lg-4 col-sm-12">
+                        <div class="card-box">
+                            <div class="cardContent">
+                                <div class="front img-1"></div>
+                                <div class="back">
+                                    <div class="back-content">
+                                        <h2>Fiddle Leaf</h2>
+                                        <h3><br/>Particular About Their Care</h3>
+                                        <p><br/>Real fiddle leaf figs struggle when soil is too wet, do not like soil that is too dry, can dry out from too much air conditioning, and does not like too much sun or not enough sun. So finicky! But so Elegant Looking!</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-content-area">
+            <div class="card-container">
+                <div class="card-row">
+                    <div class="col-lg-4 col-sm-12">
+                        <div class="card-box">
+                            <div class="cardContent">
+                                <div class="front img-2"> </div>
+                                <div class="back">
+                                    <div class="back-content">
+                                        <h2>Aloe</h2>
+                                        <h3><br/>The Healer Plant</h3>
+                                        <p><br/>Ideally placed in full sun, aloe seems to adapt to part shade. The health of the plant may be assessed by looking at its leaves, which, when healthy, should be a vibrant green, plump, feel firm to the touch, and growing upward.<br/>Aloe gel has numerous health benefits including: would healing, sunburn treatment, skincare, and more!</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-content-area">
+            <div class="card-container">
+                <div class="card-row">
+                    <div class="col-lg-4 col-sm-12">
+                        <div class="card-box">
+                            <div class="cardContent">
+                                <div class="front img-3"></div>
+                                <div class="back">
+                                    <div class="back-content">
+                                        <h2>Snake Plant</h2>
+                                        <h3><br/>The Air Purifier</h3>
+                                        <p><br/> The Snake Plant emits oxygen at night, ideal for bedrooms. Oxygen-rich air improves sleep quality and reduces sleep apnea, helping you sleep soundly and wake refreshed. Not only does the Snake Plant emit oxygen at night, but it also thrives in low light conditions, making it perfect for bedrooms.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+       $('.card-box .cardContent').click(function(){
+        $(this).closest('.card-box').toggleClass('animate');
+        });
+    </script>
     </section>
+
     <section class="sectionGallery" id="sectionGallery">
         <div class="gallery-box">
             <div class="img-preview-box">
