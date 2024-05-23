@@ -3,7 +3,7 @@
 .sectionCards {
     display: flex;
     flex-direction: row;
-    gap: 4rem;
+    gap: 2rem;
     margin-top: 4rem;
 }
 .card-content-area{
@@ -76,19 +76,19 @@
 }
 .img-1{
     background: url(images/fiddleleaf.svg);
-    background-size:auto;
+    background-size:165px;
     background-repeat: no-repeat;
     background-position: center center;
 }
 .img-2{
     background: url(images/aloe.svg);
-    background-size:auto;
+    background-size:125px;
     background-repeat: no-repeat;
     background-position: center center;
 }
 .img-3{
     background: url(images/snakeplant.svg);
-    background-size:auto;
+    background-size:150px;
     background-repeat: no-repeat;
     background-position: center center;
 }

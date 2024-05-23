@@ -19,9 +19,9 @@
     <header class="navbar">
         <h1 class="title">Hao's Plants</h1>
         <ul class="navlist">     
-          <li class="navlist-item" data-scroll-target="sectionCards" value="scroll to cards section">Plant Cards</li>
-          <li class="navlist-item" data-scroll-target="sectionGallery" value="scroll to gallery section">Plant Gallery</li>
-          <li class="navlist-item" data-scroll-target="sectionCalendar" value="scroll to calendar section">Plant Calendar</li>
+          <li class="navlist-item" data-scroll-target="sectionCards">Plant Cards</li>
+          <li class="navlist-item" data-scroll-target="sectionGallery">Plant Gallery</li>
+          <li class="navlist-item" data-scroll-target="sectionCalendar">Plant Calendar</li>
         </ul>
         <img class="pothos-decoration-left" src="./images/pothos.svg" alt="plant illustration" width="450" height="450">
         <img class="pothos-decoration-right" src="./images/pothos.svg" alt="plant illustration" width="450" height="450">    
@@ -87,22 +87,14 @@
                 </div>
             </div>
         </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script>
-       $('.card-box .cardContent').click(function(){
-        $(this).closest('.card-box').toggleClass('animate');
-        });
-    </script>
     </section>
-
     <section class="sectionGallery" id="sectionGallery">
         <div class="gallery-box">
             <div class="img-preview-box">
                 <div class="caption" id="imgCaption">
                     <h5>Hao's Plants Gallery</h5>
                 </div>
-                <img src="./images/fl-1.png" id="imgPreview" alt="Preview Image" />
-                
+                <img src="./images/fl-1.png" id="imgPreview" alt="Preview Image" /> 
             </div>
             <div class="img-thumb-container" id="thumbContainer">
                 <div class="thumb" onclick="changePreview('./images/fl-1.png', 'Fiddle-leaf Fig Plant')">
@@ -175,6 +167,12 @@
     <footer>
         <p>Created by: <span class="footer-authors">Madeline Struthers, Pia Mendoza, & Kathryn Tan</span></p>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+       $('.card-box .cardContent').click(function(){
+        $(this).closest('.card-box').toggleClass('animate');
+        });
+    </script>
     <script src="script.js"></script>
     <script src="galleryScript.js"></script>
     <script src="calendarScript.js"></script>
