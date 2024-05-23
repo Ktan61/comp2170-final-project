@@ -127,6 +127,20 @@ footer {
     font-size: 16px;
 }
 
+/*SCROLL BAR--------------------------------*/
+*::-webkit-scrollbar {
+    height: 10px;
+}
+  
+*::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, .2);
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #93BDB5C0;
+    border-radius: 10px;
+}
+
 /**_______________________________________________________________________________________________**/
 /**------------------------------------MADELINE - INFO CARDS--------------------------------------**/
 .sectionCards {
