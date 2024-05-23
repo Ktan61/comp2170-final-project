@@ -12,7 +12,7 @@
     cursor: pointer;
 }
 .card-box:hover{
-    box-shadow: 0px 0px 20px 10px rgba(62, 101, 93, 0.7);
+    box-shadow: 0px 0px 8px 5px rgba(62, 101, 93, 0.7);
 }
 .card-box.animate .cardContent{
     transform: rotateY(180deg);
@@ -53,6 +53,9 @@
 .back-content{
     border: 5px inset var(--bone);
     padding: 2rem 1rem;
+    width: 400px;
+    height: 360px;
+    overflow-y: scroll;
 }
 .back-content h2{
     font-family: "Figtree", sans-serif;
