@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined');
+
 .sectionCards {
     display: flex;
     flex-direction: row;
@@ -58,8 +60,13 @@
     overflow-y: scroll;
 }
 .back-content h2{
-    font-family: "Figtree", sans-serif;
+    font-family: "Glass Antiqua", cursive;
     font-size: var(--font-h2);
+    font-weight:bold;
+}
+.back-content h3{
+    font-family: "Glass Antiqua", cursive;
+    font-size: var(--font-h4);
     font-weight:bold;
 }
 .back-content p{
